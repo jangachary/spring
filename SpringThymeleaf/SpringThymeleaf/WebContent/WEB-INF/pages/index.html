@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Spring Thymeleaf</title>
+</head>
+<body>
+	<h1>Welcome to Thymeleaf Spring Integration</h1>
+	<form
+		action="register"
+		method="post"
+	>
+		<input
+			name="name"
+			placeholder="Enter Name"> 
+			
+			<input
+			type="radio"
+			name="course"
+			value="java" />Java
+			
+			<input
+			type="radio"
+			name="course"
+			value="c++" />c++
+			
+			
+			
+		<button>Submit</button>
+	</form>
+	Entered Name:
+	<span th:text="${name}"></span>
+	<br>
+	Selected course :<span th:text="${course}"></span>
+	<br>
+	<a href="list">getlist</a>
+</body>
+</html>
